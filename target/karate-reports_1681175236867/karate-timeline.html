@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"pool-1-thread-5","id":1},{"content":"pool-1-thread-6","id":2},{"content":"pool-1-thread-7","id":3},{"content":"pool-1-thread-8","id":4},{"content":"pool-1-thread-4","id":5},{"content":"pool-1-thread-1","id":6},{"content":"pool-1-thread-2","id":7},{"content":"pool-1-thread-3","id":8}];
+var items = [{"id":1,"group":1,"content":"examples\/users\/users[1:5]","start":1681174806504,"end":1681174808543,"title":"examples\/users\/users[1:5] 09:00:06.504-09:00:08.543 1. Create a user to the endpoint"},{"id":2,"group":2,"content":"examples\/users\/users[2:20]","start":1681174806507,"end":1681174808498,"title":"examples\/users\/users[2:20] 09:00:06.507-09:00:08.498 2. Get all user response"},{"id":3,"group":3,"content":"examples\/users\/users[3:28]","start":1681174806554,"end":1681174808522,"title":"examples\/users\/users[3:28] 09:00:06.554-09:00:08.522 3 Loop all of the json response in foreach"},{"id":4,"group":4,"content":"examples\/users\/users[4:36]","start":1681174806566,"end":1681174808521,"title":"examples\/users\/users[4:36] 09:00:06.566-09:00:08.521 4 Get a booking id details"},{"id":5,"group":5,"content":"examples\/Token\/token[1:6]","start":1681174806404,"end":1681174808790,"title":"examples\/Token\/token[1:6] 09:00:06.404-09:00:08.790 1. Get the token","className":"failed"},{"id":6,"group":6,"content":"examples\/Booking\/booking[1:7]","start":1681174806370,"end":1681174809590,"title":"examples\/Booking\/booking[1:7] 09:00:06.370-09:00:09.590 1. Get the booking ids"},{"id":7,"group":7,"content":"examples\/Booking\/booking[2:20]","start":1681174806378,"end":1681174808826,"title":"examples\/Booking\/booking[2:20] 09:00:06.378-09:00:08.826 2. Create the booking"},{"id":8,"group":8,"content":"examples\/Booking\/booking[3:42]","start":1681174806404,"end":1681174806635,"title":"examples\/Booking\/booking[3:42] 09:00:06.404-09:00:06.635 3. Get the booking id specific detail","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
