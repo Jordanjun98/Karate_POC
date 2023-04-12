@@ -1,0 +1,8 @@
+{ "firstname" : "before update",
+ "lastname" : "Alex",
+      "totalprice" : 280,
+      "depositpaid" : true,
+      "bookingdates" : {
+          "checkin" : "2023-08-08",
+          "checkout" : "2023-08-18"
+},  "additionalneeds" : "Brunch" }

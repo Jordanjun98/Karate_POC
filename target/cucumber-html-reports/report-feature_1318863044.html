@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>src/test/java</td>
-      <td>11 Apr 2023, 16:56</td>
+      <td>12 Apr 2023, 09:40</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">examples/Booking/booking.feature</td>
-          <td      class="passed"    >11</td>
-          <td      class="failed"    >1</td>
+          <td      class="passed"    >9</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">12</td>
+          <td >0</td>
+          <td class="total">9</td>
 
           <td  class="passed"    >1</td>
-          <td  class="failed"    >1</td>
-          <td class="total">2</td>
+          <td >0</td>
+          <td class="total">1</td>
 
-          <td class="duration" data-value="3293593511">3.293</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="2064009579">2.064</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -171,7 +171,7 @@ $(document).ready(function() {
 </div>
 
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Feature</span>
   <span class="name">examples/Booking/booking.feature</span>
 
@@ -268,16 +268,16 @@ $(document).ready(function() {
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_2210141206.html">@tag1</a>
+       <a href="report-tag_2966668124.html">@CreateBooking</a>
 </div>
 
 
-  <span class="lead-duration duration">3.260</span>
+  <span class="lead-duration duration">2.062</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-3">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">2. Create the booking</span>
 
@@ -288,16 +288,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-3" class="collapse collapsable-details  in ">
+  <div id="element-3" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-4">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-4">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -307,7 +307,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-4" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-4" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -315,7 +315,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">url urlBase + '/booking'</span>
 
-  <span class="lead-duration duration">0.017</span>
+  <span class="lead-duration duration">0.032</span>
 
 </div>
 
@@ -342,7 +342,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">headers {Accept:'application/json', Content-Type:'application/json'}</span>
 
-  <span class="lead-duration duration">0.048</span>
+  <span class="lead-duration duration">0.024</span>
 
 </div>
 
@@ -367,9 +367,36 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">request</span>
+  <span class="name">request read('PostCapture.json')</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.012</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">1.971</span>
 
 </div>
 
@@ -387,73 +414,28 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-5" class="collapse collapsable-details">
-        <pre>{ &quot;firstname&quot; : &quot;Lee1&quot;,
-&quot;lastname&quot; : &quot;Alex&quot;,
-&quot;totalprice&quot; : 330,
-&quot;depositpaid&quot; : true,
-&quot;bookingdates&quot; : {
-    &quot;checkin&quot; : &quot;2023-08-08&quot;,
-    &quot;checkout&quot; : &quot;2023-08-18&quot;
-},
-&quot;additionalneeds&quot; : &quot;Brunch&quot; }</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method post</span>
-
-  <span class="lead-duration duration">3.143</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-6" class="collapse collapsable-details">
-        <pre>16:56:37.091 request:
+        <pre>09:40:30.804 request:
 1 &gt; POST https://restful-booker.herokuapp.com/booking
 1 &gt; Accept: application/json
 1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 165
+1 &gt; Content-Length: 174
 1 &gt; Host: restful-booker.herokuapp.com
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/10.0.1)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;firstname&quot;:&quot;Lee1&quot;,&quot;lastname&quot;:&quot;Alex&quot;,&quot;totalprice&quot;:330,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-08&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Brunch&quot;}
+{&quot;firstname&quot;:&quot;before update&quot;,&quot;lastname&quot;:&quot;Alex&quot;,&quot;totalprice&quot;:280,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-08&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Brunch&quot;}
 
-16:56:38.624 response time in milliseconds: 1531
+09:40:32.298 response time in milliseconds: 1491
 1 &lt; 200
 1 &lt; Server: Cowboy
 1 &lt; Connection: keep-alive
 1 &lt; X-Powered-By: Express
 1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Content-Length: 194
-1 &lt; Etag: W/&quot;c2-V7WXZTWaR2DOUbPzl6RGz2mTWwQ&quot;
-1 &lt; Date: Tue, 11 Apr 2023 08:56:38 GMT
+1 &lt; Content-Length: 203
+1 &lt; Etag: W/&quot;cb-GSaY2LZeDseSjp/eXNNZg7Qcw34&quot;
+1 &lt; Date: Wed, 12 Apr 2023 01:40:32 GMT
 1 &lt; Via: 1.1 vegur
-{&quot;bookingid&quot;:4062,&quot;booking&quot;:{&quot;firstname&quot;:&quot;Lee1&quot;,&quot;lastname&quot;:&quot;Alex&quot;,&quot;totalprice&quot;:330,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-08&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Brunch&quot;}}
+{&quot;bookingid&quot;:8065,&quot;booking&quot;:{&quot;firstname&quot;:&quot;before update&quot;,&quot;lastname&quot;:&quot;Alex&quot;,&quot;totalprice&quot;:280,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-08&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Brunch&quot;}}
 </pre>
       </div>
     </div>
@@ -500,7 +482,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def bookingID = response.bookingid</span>
 
-  <span class="lead-duration duration">0.018</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -527,7 +509,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">karate.log(bookingID)</span>
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.007</span>
 
 </div>
 
@@ -541,11 +523,11 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
           <a>Doc string</a>
       </div>
-      <div id="msg-7" class="collapse collapsable-details">
-        <pre>16:56:38.649 4062 
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>09:40:32.308 8065 
 </pre>
       </div>
     </div>
@@ -565,7 +547,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">match bookingID == '#number'</span>
 
-  <span class="lead-duration duration">0.011</span>
+  <span class="lead-duration duration">0.013</span>
 
 </div>
 
@@ -577,250 +559,6 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-* failed">
-  <span class="keyword indention">*</span>
-  <span class="name">karate.callSingle('classpath:examples/Booking/booking.feature', bookingID)</span>
-
-  <span class="lead-duration duration">0.018</span>
-
-</div>
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-8">
-          <a>js</a>
-      </div>
-      <div id="msg-8" class="collapse collapsable-details  in ">
-        <pre>js failed:
-&gt;&gt;&gt;&gt;
-01: karate.callSingle('classpath:examples/Booking/booking.feature', bookingID)
-&lt;&lt;&lt;&lt;
-org.graalvm.polyglot.PolyglotException: feature call argument is not a json object or array: [type: NUMBER, value: 4062]
-- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
-- &lt;js&gt;.:program(Unnamed:1)
-
-classpath:examples/Booking/booking.feature:43</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-9" class="collapse collapsable-details">
-        <pre>16:56:38.667 &gt;&gt; lock acquired, begin callSingle: classpath:examples/Booking/booking.feature
-16:56:38.672 callSingle() will cache an exception
-16:56:38.673 &lt;&lt; lock released, cached callSingle: classpath:examples/Booking/booking.feature
-16:56:38.673 callSingle() cached result is an exception
-16:56:38.679 classpath:examples/Booking/booking.feature:43
-* karate.callSingle('classpath:examples/Booking/booking.feature', bookingID)
-js failed:
-&gt;&gt;&gt;&gt;
-01: karate.callSingle('classpath:examples/Booking/booking.feature', bookingID)
-&lt;&lt;&lt;&lt;
-org.graalvm.polyglot.PolyglotException: feature call argument is not a json object or array: [type: NUMBER, value: 4062]
-- com.intuit.karate.core.ScenarioBridge.callSingle(ScenarioBridge.java:234)
-- &lt;js&gt;.:program(Unnamed:1)
-
-classpath:examples/Booking/booking.feature:43
-</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-
-
-<div class="tags indention">
-</div>
-
-
-  <span class="lead-duration duration">0.001</span>
-
-
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-10">
-
-<div class="brief passed">
-  <span class="keyword indention">Background</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-10" class="collapse collapsable-details ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-11">
-
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-11" class="inner-level collapse collapsable-details ">
-      <div class="step">
-
-
-<div class="brief step-name-Given passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url urlBase</span>
-
-  <span class="lead-duration duration">0.001</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-
-
-<div class="tags indention">
-</div>
-
-
-  <span class="lead-duration duration">0.029</span>
-
-
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-12">
-
-<div class="brief passed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">3. Test passing variable to other scenario</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-12" class="collapse collapsable-details ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-13">
-
-<div class="brief passed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-13" class="inner-level collapse collapsable-details ">
-      <div class="step">
-
-
-<div class="brief step-name-* passed">
-  <span class="keyword indention">*</span>
-  <span class="name">print karate.get('bookingID')</span>
-
-  <span class="lead-duration duration">0.029</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-14">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-14" class="collapse collapsable-details">
-        <pre>16:56:35.448 [print] null 
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 

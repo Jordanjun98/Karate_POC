@@ -1,0 +1,11 @@
+.DS_Store
+.idea/
+LearnKarate.iml
+pom.xml
+target/
+src/test/java/logback-test.xml
+src/test/java/karate-config.js
+src/.DS_Store
+src/test/.DS_Store
+src/test/java/.DS_Store
+src/test/java/examples/.DS_Store

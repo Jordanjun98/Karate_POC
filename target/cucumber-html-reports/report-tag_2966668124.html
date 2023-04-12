@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>src/test/java</td>
-      <td>11 Apr 2023, 20:08</td>
+      <td>12 Apr 2023, 09:40</td>
     </tr>
   </tbody>
 </table>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="3180034058">3.180</td>
+          <td class="duration" data-value="2062906592">2.062</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -171,7 +171,7 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_1_1318863044.html">examples/Booking/booking.feature</a>
+      <a href="report-feature_1318863044.html">examples/Booking/booking.feature</a>
     </div>
 
 
@@ -181,7 +181,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">3.180</span>
+  <span class="lead-duration duration">2.062</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -224,7 +224,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">url urlBase + '/booking'</span>
 
-  <span class="lead-duration duration">0.683</span>
+  <span class="lead-duration duration">0.032</span>
 
 </div>
 
@@ -251,7 +251,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">headers {Accept:'application/json', Content-Type:'application/json'}</span>
 
-  <span class="lead-duration duration">0.456</span>
+  <span class="lead-duration duration">0.024</span>
 
 </div>
 
@@ -276,9 +276,36 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">request</span>
+  <span class="name">request read('PostCapture.json')</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.012</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">1.971</span>
 
 </div>
 
@@ -296,73 +323,28 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>{ &quot;firstname&quot; : &quot;Lee2&quot;,
-&quot;lastname&quot; : &quot;Alex&quot;,
-&quot;totalprice&quot; : 360,
-&quot;depositpaid&quot; : true,
-&quot;bookingdates&quot; : {
-    &quot;checkin&quot; : &quot;2023-08-08&quot;,
-    &quot;checkout&quot; : &quot;2023-08-18&quot;
-},
-&quot;additionalneeds&quot; : &quot;Brunch&quot; }</pre>
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">method post</span>
-
-  <span class="lead-duration duration">2.009</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-4" class="collapse collapsable-details">
-        <pre>20:08:53.545 request:
+        <pre>09:40:30.804 request:
 1 &gt; POST https://restful-booker.herokuapp.com/booking
 1 &gt; Accept: application/json
 1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 165
+1 &gt; Content-Length: 174
 1 &gt; Host: restful-booker.herokuapp.com
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/10.0.1)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;firstname&quot;:&quot;Lee2&quot;,&quot;lastname&quot;:&quot;Alex&quot;,&quot;totalprice&quot;:360,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-08&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Brunch&quot;}
+{&quot;firstname&quot;:&quot;before update&quot;,&quot;lastname&quot;:&quot;Alex&quot;,&quot;totalprice&quot;:280,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-08&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Brunch&quot;}
 
-20:08:54.828 response time in milliseconds: 1281
+09:40:32.298 response time in milliseconds: 1491
 1 &lt; 200
 1 &lt; Server: Cowboy
 1 &lt; Connection: keep-alive
 1 &lt; X-Powered-By: Express
 1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Content-Length: 194
-1 &lt; Etag: W/&quot;c2-vCJd45m5EfbRIcwY9thsvo+jE2M&quot;
-1 &lt; Date: Tue, 11 Apr 2023 12:08:54 GMT
+1 &lt; Content-Length: 203
+1 &lt; Etag: W/&quot;cb-GSaY2LZeDseSjp/eXNNZg7Qcw34&quot;
+1 &lt; Date: Wed, 12 Apr 2023 01:40:32 GMT
 1 &lt; Via: 1.1 vegur
-{&quot;bookingid&quot;:4486,&quot;booking&quot;:{&quot;firstname&quot;:&quot;Lee2&quot;,&quot;lastname&quot;:&quot;Alex&quot;,&quot;totalprice&quot;:360,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-08&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Brunch&quot;}}
+{&quot;bookingid&quot;:8065,&quot;booking&quot;:{&quot;firstname&quot;:&quot;before update&quot;,&quot;lastname&quot;:&quot;Alex&quot;,&quot;totalprice&quot;:280,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-08&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Brunch&quot;}}
 </pre>
       </div>
     </div>
@@ -409,7 +391,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def bookingID = response.bookingid</span>
 
-  <span class="lead-duration duration">0.009</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -450,11 +432,11 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
           <a>Doc string</a>
       </div>
-      <div id="msg-5" class="collapse collapsable-details">
-        <pre>20:08:54.848 4486 
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>09:40:32.308 8065 
 </pre>
       </div>
     </div>

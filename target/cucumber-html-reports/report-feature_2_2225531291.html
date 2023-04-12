@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>src/test/java</td>
-      <td>11 Apr 2023, 20:08</td>
+      <td>12 Apr 2023, 09:28</td>
     </tr>
   </tbody>
 </table>
@@ -127,18 +127,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">examples/Booking/UpdateBooking.feature</td>
-          <td      class="passed"    >2</td>
+          <td      class="passed"    >22</td>
           <td      class="failed"    >1</td>
-          <td     class="skipped"   >4</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">7</td>
+          <td >0</td>
+          <td class="total">23</td>
 
           <td >0</td>
           <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="714869024">0.714</td>
+          <td class="duration" data-value="10660836106">10.660</td>
           <td class="failed">Failed</td>
         </tr>
         </tbody>
@@ -191,7 +191,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.714</span>
+  <span class="lead-duration duration">10.660</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
@@ -232,9 +232,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-* passed">
   <span class="keyword indention">*</span>
-  <span class="name">call read('classpath:examples/Booking/GetBookingDetails.feature@CreateBooking')</span>
+  <span class="name">call read('classpath:examples/Booking/GetBookingDetails.feature@GetBookingID')</span>
 
-  <span class="lead-duration duration">0.006</span>
+  <span class="lead-duration duration">3.721</span>
 
 </div>
 
@@ -284,11 +284,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given failed">
-  <span class="keyword indention">Given</span>
-  <span class="name">url urlBase + '/booking/'+bookingID</span>
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">call read('classpath:examples/Booking/booking.feature@CreateBooking')</span>
 
-  <span class="lead-duration duration">0.708</span>
+  <span class="lead-duration duration">2.187</span>
 
 </div>
 
@@ -297,43 +297,199 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>js</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>js failed:
-&gt;&gt;&gt;&gt;
-01: urlBase + '/booking/'+bookingID
-&lt;&lt;&lt;&lt;
-org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;bookingID&quot; is not defined
-- &lt;js&gt;.:program(Unnamed:1)
 
-classpath:examples/Booking/UpdateBooking.feature:7</pre>
+
+
+
+
+
+
+
+
+
       </div>
-    </div>
-  </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; passed">
+  <span class="keyword indention">&gt;</span>
+  <span class="name">examples/Booking/booking.feature</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt;&amp;gt; Given passed">
+  <span class="keyword indention">&gt;&gt; Given</span>
+  <span class="name">url urlBase</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt;&amp;gt; Given passed">
+  <span class="keyword indention">&gt;&gt; Given</span>
+  <span class="name">url urlBase + '/booking'</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt;&amp;gt; And passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">headers {Accept:'application/json', Content-Type:'application/json'}</span>
+
+  <span class="lead-duration duration">0.058</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt;&amp;gt; And passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">request read('PostCapture.json')</span>
+
+  <span class="lead-duration duration">0.008</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt;&amp;gt; When passed">
+  <span class="keyword indention">&gt;&gt; When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">2.076</span>
+
+</div>
+
+
+
+
+
 
 
 
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
           <a>Doc string</a>
       </div>
-      <div id="msg-4" class="collapse collapsable-details">
-        <pre>20:08:52.392 classpath:examples/Booking/UpdateBooking.feature:7
-Given url urlBase + '/booking/'+bookingID
-js failed:
-&gt;&gt;&gt;&gt;
-01: urlBase + '/booking/'+bookingID
-&lt;&lt;&lt;&lt;
-org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;bookingID&quot; is not defined
-- &lt;js&gt;.:program(Unnamed:1)
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>09:28:40.976 request:
+1 &gt; POST https://restful-booker.herokuapp.com/booking
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 174
+1 &gt; Host: restful-booker.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/10.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;firstname&quot;:&quot;before update&quot;,&quot;lastname&quot;:&quot;Alex&quot;,&quot;totalprice&quot;:280,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-08&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Brunch&quot;}
 
-classpath:examples/Booking/UpdateBooking.feature:7
+09:28:42.559 response time in milliseconds: 1580
+1 &lt; 200
+1 &lt; Server: Cowboy
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 203
+1 &lt; Etag: W/&quot;cb-A1yoeUaQ0hjrNDmPH0OrxQ0p1AQ&quot;
+1 &lt; Date: Wed, 12 Apr 2023 01:28:42 GMT
+1 &lt; Via: 1.1 vegur
+{&quot;bookingid&quot;:6627,&quot;booking&quot;:{&quot;firstname&quot;:&quot;before update&quot;,&quot;lastname&quot;:&quot;Alex&quot;,&quot;totalprice&quot;:280,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-08&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Brunch&quot;}}
 </pre>
       </div>
     </div>
@@ -349,7 +505,319 @@ classpath:examples/Booking/UpdateBooking.feature:7
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-&amp;gt;&amp;gt; Then passed">
+  <span class="keyword indention">&gt;&gt; Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt;&amp;gt; * passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">def bookingID = response.bookingid</span>
+
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt;&amp;gt; * passed">
+  <span class="keyword indention">&gt;&gt; *</span>
+  <span class="name">karate.log(bookingID)</span>
+
+  <span class="lead-duration duration">0.005</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>09:28:42.571 6627 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt;&amp;gt; And passed">
+  <span class="keyword indention">&gt;&gt; And</span>
+  <span class="name">match bookingID == '#number'</span>
+
+  <span class="lead-duration duration">0.013</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url urlBase + '/booking/'+bookingID</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">headers {Accept:'application/json', Content-Type:'application/json'}</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method get</span>
+
+  <span class="lead-duration duration">1.490</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>09:28:42.592 request:
+1 &gt; GET https://restful-booker.herokuapp.com/booking/6627
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json
+1 &gt; Host: restful-booker.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/10.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:28:44.078 response time in milliseconds: 1485
+1 &lt; 200
+1 &lt; Server: Cowboy
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 174
+1 &lt; Etag: W/&quot;ae-rM/cadeWSMbdLzBJLwQ5cE8NwEo&quot;
+1 &lt; Date: Wed, 12 Apr 2023 01:28:43 GMT
+1 &lt; Via: 1.1 vegur
+{&quot;firstname&quot;:&quot;before update&quot;,&quot;lastname&quot;:&quot;Alex&quot;,&quot;totalprice&quot;:280,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-08&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Brunch&quot;}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def booking_ID = response.bookingid</span>
+
+  <span class="lead-duration duration">0.008</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url urlBase + '/booking/'+booking_ID</span>
+
+  <span class="lead-duration duration">0.015</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">headers {Accept:'application/json', Content-Type:'application/json', Authorization:'Basic YWRtaW46cGFzc3dvcmQxMjM='}</span>
 
@@ -376,7 +844,7 @@ classpath:examples/Booking/UpdateBooking.feature:7
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">request</span>
 
@@ -394,16 +862,16 @@ classpath:examples/Booking/UpdateBooking.feature:7
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
           <a>Doc string</a>
       </div>
-      <div id="msg-5" class="collapse collapsable-details">
-        <pre>{ &quot;firstname&quot; : &quot;LIM&quot;,
-      &quot;lastname&quot; : &quot;LIM EEEE&quot;,
-      &quot;totalprice&quot; : 340,
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>{ &quot;firstname&quot; : &quot;Alex 1&quot;,
+      &quot;lastname&quot; : &quot;Update 2&quot;,
+      &quot;totalprice&quot; : 500,
       &quot;depositpaid&quot; : true,
       &quot;bookingdates&quot; : {
-   &quot;checkin&quot; : &quot;2023-08-08&quot;,
+   &quot;checkin&quot; : &quot;2023-08-10&quot;,
    &quot;checkout&quot; : &quot;2023-08-18&quot;
       },
       &quot;additionalneeds&quot; : &quot;Add bed&quot; }</pre>
@@ -421,11 +889,11 @@ classpath:examples/Booking/UpdateBooking.feature:7
       <div class="step">
 
 
-<div class="brief step-name-When skipped">
+<div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
   <span class="name">method put</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">1.065</span>
 
 </div>
 
@@ -437,6 +905,39 @@ classpath:examples/Booking/UpdateBooking.feature:7
 
 
 
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details">
+        <pre>09:28:44.108 request:
+1 &gt; PUT https://restful-booker.herokuapp.com/booking/null
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Authorization: Basic YWRtaW46cGFzc3dvcmQxMjM=
+1 &gt; Content-Length: 172
+1 &gt; Host: restful-booker.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/10.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;firstname&quot;:&quot;Alex 1&quot;,&quot;lastname&quot;:&quot;Update 2&quot;,&quot;totalprice&quot;:500,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-10&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Add bed&quot;}
+
+09:28:45.170 response time in milliseconds: 1062
+1 &lt; 405
+1 &lt; Server: Cowboy
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: text/plain; charset=utf-8
+1 &lt; Content-Length: 18
+1 &lt; Etag: W/&quot;12-UGJMK66P4abaBlq0vKHJaCKuGCA&quot;
+1 &lt; Date: Wed, 12 Apr 2023 01:28:45 GMT
+1 &lt; Via: 1.1 vegur
+Method Not Allowed
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -448,7 +949,7 @@ classpath:examples/Booking/UpdateBooking.feature:7
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then failed">
   <span class="keyword indention">Then</span>
   <span class="name">status 200</span>
 
@@ -461,9 +962,37 @@ classpath:examples/Booking/UpdateBooking.feature:7
 
 
 
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-8">
+          <a>status</a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details  in ">
+        <pre>status code was: 405, expected: 200, response time in milliseconds: 1062, url: https://restful-booker.herokuapp.com/booking/null, response: 
+Method Not Allowed
+classpath:examples/Booking/UpdateBooking.feature:21</pre>
+      </div>
+    </div>
+  </div>
 
 
 
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>09:28:45.172 classpath:examples/Booking/UpdateBooking.feature:21
+Then status 200
+status code was: 405, expected: 200, response time in milliseconds: 1062, url: https://restful-booker.herokuapp.com/booking/null, response: 
+Method Not Allowed
+classpath:examples/Booking/UpdateBooking.feature:21
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 

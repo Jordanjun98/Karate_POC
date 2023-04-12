@@ -21,45 +21,13 @@ Feature: As a user i wan to create a booking
   Scenario: 2. Create the booking
     Given url urlBase + '/booking'
     And headers {Accept:'application/json', Content-Type:'application/json'}
-    And request
-    """
-      { "firstname" : "Lee2",
-      "lastname" : "Alex",
-      "totalprice" : 360,
-      "depositpaid" : true,
-      "bookingdates" : {
-          "checkin" : "2023-08-08",
-          "checkout" : "2023-08-18"
-      },
-      "additionalneeds" : "Brunch" }
-      """
-#    * multipart file loadfile = {read: 'PostCapture.json',  contentType: 'application/json'}
+    And request read('PostCapture.json')
     When method post
     Then status 200
     * def bookingID = response.bookingid
     * karate.log(bookingID)
     And match bookingID == '#number'
 
-
-  @ignore
-  Scenario: 4. Update the booking details
-    Given url urlBase + '/booking/665'
-    And headers {Accept:'application/json', Content-Type:'application/json', Authorization:'Basic YWRtaW46cGFzc3dvcmQxMjM='}
-    And request
-      """
-       { "firstname" : "LIM",
-      "lastname" : "LIM EEEE",
-      "totalprice" : 340,
-      "depositpaid" : true,
-      "bookingdates" : {
-          "checkin" : "2023-08-08",
-          "checkout" : "2023-08-18"
-      },
-      "additionalneeds" : "Add bed" }
-      """
-    When method put
-    Then status 200
-#    * karate.log(token)
 
 
 

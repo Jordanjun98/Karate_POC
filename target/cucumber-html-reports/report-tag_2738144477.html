@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>src/test/java</td>
-      <td>11 Apr 2023, 20:05</td>
+      <td>12 Apr 2023, 09:28</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@GetBookingID</td>
-          <td >0</td>
-          <td      class="failed"    >1</td>
-          <td     class="skipped"   >4</td>
+          <td      class="passed"    >16</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">5</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">16</td>
 
+          <td  class="passed"    >1</td>
           <td >0</td>
-          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="85669850">0.085</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="5908013877">5.908</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -181,12 +181,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.085</span>
+  <span class="lead-duration duration">5.908</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">1. Get the booking id specific detail</span>
 
@@ -197,16 +197,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -216,15 +216,15 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
-<div class="brief step-name-* failed">
+<div class="brief step-name-* passed">
   <span class="keyword indention">*</span>
-  <span class="name">call read('classpath:examples/Booking/booking.feature@CreateBooking')     #Call from another feature file scenario</span>
+  <span class="name">call read('classpath:examples/Booking/booking.feature@CreateBooking')</span>
 
-  <span class="lead-duration duration">0.085</span>
+  <span class="lead-duration duration">2.222</span>
 
 </div>
 
@@ -233,65 +233,9 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>js</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>js failed:
-&gt;&gt;&gt;&gt;
-01: #Call from another feature file scenario
-&lt;&lt;&lt;&lt;
-org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:1:0 Expected an operand but found private_ident
-#Call from another feature file scenario
-^
-
-- org.graalvm.polyglot.Context.eval(Context.java:401)
-- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:141)
-- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:137)
-- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1252)
-- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2205)
-- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2124)
-- com.intuit.karate.core.ScenarioEngine.call(ScenarioEngine.java:1921)
-
-classpath:examples/Booking/GetBookingDetails.feature:6</pre>
-      </div>
-    </div>
-  </div>
 
 
 
-
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-4" class="collapse collapsable-details">
-        <pre>20:05:01.670 classpath:examples/Booking/GetBookingDetails.feature:6
-* call read('classpath:examples/Booking/booking.feature@CreateBooking')     #Call from another feature file scenario
-js failed:
-&gt;&gt;&gt;&gt;
-01: #Call from another feature file scenario
-&lt;&lt;&lt;&lt;
-org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:1:0 Expected an operand but found private_ident
-#Call from another feature file scenario
-^
-
-- org.graalvm.polyglot.Context.eval(Context.java:401)
-- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:141)
-- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:137)
-- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1252)
-- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2205)
-- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2124)
-- com.intuit.karate.core.ScenarioEngine.call(ScenarioEngine.java:1921)
-
-classpath:examples/Booking/GetBookingDetails.feature:6
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -303,9 +247,9 @@ classpath:examples/Booking/GetBookingDetails.feature:6
       <div class="step">
 
 
-<div class="brief step-name-Given skipped">
-  <span class="keyword indention">Given</span>
-  <span class="name">url urlBase + '/booking/'+bookingID</span>
+<div class="brief step-name- passed">
+  <span class="keyword indention"></span>
+  <span class="name">examples/Booking/booking.feature</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -330,7 +274,320 @@ classpath:examples/Booking/GetBookingDetails.feature:6
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url urlBase</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Given passed">
+  <span class="keyword indention">&gt; Given</span>
+  <span class="name">url urlBase + '/booking'</span>
+
+  <span class="lead-duration duration">0.004</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">headers {Accept:'application/json', Content-Type:'application/json'}</span>
+
+  <span class="lead-duration duration">0.071</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">request read('PostCapture.json')</span>
+
+  <span class="lead-duration duration">0.009</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; When passed">
+  <span class="keyword indention">&gt; When</span>
+  <span class="name">method post</span>
+
+  <span class="lead-duration duration">2.076</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>09:28:40.976 request:
+1 &gt; POST https://restful-booker.herokuapp.com/booking
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 174
+1 &gt; Host: restful-booker.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/10.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;firstname&quot;:&quot;before update&quot;,&quot;lastname&quot;:&quot;Alex&quot;,&quot;totalprice&quot;:280,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-08&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Brunch&quot;}
+
+09:28:42.559 response time in milliseconds: 1580
+1 &lt; 200
+1 &lt; Server: Cowboy
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 203
+1 &lt; Etag: W/&quot;cb-qduEpQhVZU98HZl3gJ2x82fA/b0&quot;
+1 &lt; Date: Wed, 12 Apr 2023 01:28:42 GMT
+1 &lt; Via: 1.1 vegur
+{&quot;bookingid&quot;:6628,&quot;booking&quot;:{&quot;firstname&quot;:&quot;before update&quot;,&quot;lastname&quot;:&quot;Alex&quot;,&quot;totalprice&quot;:280,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-08&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Brunch&quot;}}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; Then passed">
+  <span class="keyword indention">&gt; Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">def bookingID = response.bookingid</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; * passed">
+  <span class="keyword indention">&gt; *</span>
+  <span class="name">karate.log(bookingID)</span>
+
+  <span class="lead-duration duration">0.011</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>09:28:42.575 6628 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-&amp;gt; And passed">
+  <span class="keyword indention">&gt; And</span>
+  <span class="name">match bookingID == '#number'</span>
+
+  <span class="lead-duration duration">0.010</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url urlBase + '/booking/'+bookingID</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">headers {Accept:'application/json', Content-Type:'application/json'}</span>
 
@@ -357,9 +614,67 @@ classpath:examples/Booking/GetBookingDetails.feature:6
       <div class="step">
 
 
-<div class="brief step-name-When skipped">
+<div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
   <span class="name">method get</span>
+
+  <span class="lead-duration duration">1.490</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>09:28:42.592 request:
+1 &gt; GET https://restful-booker.herokuapp.com/booking/6628
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json
+1 &gt; Host: restful-booker.herokuapp.com
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/10.0.1)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:28:44.078 response time in milliseconds: 1485
+1 &lt; 200
+1 &lt; Server: Cowboy
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 174
+1 &lt; Etag: W/&quot;ae-rM/cadeWSMbdLzBJLwQ5cE8NwEo&quot;
+1 &lt; Date: Wed, 12 Apr 2023 01:28:43 GMT
+1 &lt; Via: 1.1 vegur
+{&quot;firstname&quot;:&quot;before update&quot;,&quot;lastname&quot;:&quot;Alex&quot;,&quot;totalprice&quot;:280,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-08&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Brunch&quot;}
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -384,11 +699,11 @@ classpath:examples/Booking/GetBookingDetails.feature:6
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">status 200</span>
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def booking_ID = response.bookingid</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.008</span>
 
 </div>
 
