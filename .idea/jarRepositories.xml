@@ -16,5 +16,15 @@
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="101digital" />
+      <option name="name" value="101digital" />
+      <option name="url" value="https://nexus.101digital.io/repository/all" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="github" />
+      <option name="name" value="github" />
+      <option name="url" value="https://github.acsdigital.dev/_registry/maven/adb/marketplace-commons" />
+    </remote-repository>
   </component>
 </project>

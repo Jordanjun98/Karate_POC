@@ -3,7 +3,6 @@ Feature: As a user i wan to get token
 
   Given url urlBase
 
-
   @ignore
   Scenario: 1. Get the token
     Given url urlBase + '/auth'

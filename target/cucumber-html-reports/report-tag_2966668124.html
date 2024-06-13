@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>src/test/java</td>
-      <td>12 Apr 2023, 09:40</td>
+      <td>19 Nov 2023, 13:22</td>
     </tr>
   </tbody>
 </table>
@@ -138,7 +138,7 @@ $(document).ready(function() {
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="2062906592">2.062</td>
+          <td class="duration" data-value="1745549916">1.745</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -181,7 +181,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">2.062</span>
+  <span class="lead-duration duration">1.745</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -224,7 +224,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">url urlBase + '/booking'</span>
 
-  <span class="lead-duration duration">0.032</span>
+  <span class="lead-duration duration">0.014</span>
 
 </div>
 
@@ -251,7 +251,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">headers {Accept:'application/json', Content-Type:'application/json'}</span>
 
-  <span class="lead-duration duration">0.024</span>
+  <span class="lead-duration duration">0.017</span>
 
 </div>
 
@@ -278,7 +278,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">request read('PostCapture.json')</span>
 
-  <span class="lead-duration duration">0.012</span>
+  <span class="lead-duration duration">0.006</span>
 
 </div>
 
@@ -305,7 +305,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method post</span>
 
-  <span class="lead-duration duration">1.971</span>
+  <span class="lead-duration duration">1.663</span>
 
 </div>
 
@@ -323,7 +323,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>09:40:30.804 request:
+        <pre>13:22:51.227 request:
 1 &gt; POST https://restful-booker.herokuapp.com/booking
 1 &gt; Accept: application/json
 1 &gt; Content-Type: application/json; charset=UTF-8
@@ -334,17 +334,20 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;firstname&quot;:&quot;before update&quot;,&quot;lastname&quot;:&quot;Alex&quot;,&quot;totalprice&quot;:280,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-08&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Brunch&quot;}
 
-09:40:32.298 response time in milliseconds: 1491
+13:22:52.501 response time in milliseconds: 1273
 1 &lt; 200
 1 &lt; Server: Cowboy
+1 &lt; Report-To: {&quot;group&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://nel.heroku.com/reports?ts=1700371372&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=1L9LdL%2F2EmJZW1ruD%2FjnFp2M7n4%2Br7suCt%2FTFCNBPXA%3D&quot;}]}
+1 &lt; Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1700371372&amp;sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&amp;s=1L9LdL%2F2EmJZW1ruD%2FjnFp2M7n4%2Br7suCt%2FTFCNBPXA%3D
+1 &lt; Nel: {&quot;report_to&quot;:&quot;heroku-nel&quot;,&quot;max_age&quot;:3600,&quot;success_fraction&quot;:0.005,&quot;failure_fraction&quot;:0.05,&quot;response_headers&quot;:[&quot;Via&quot;]}
 1 &lt; Connection: keep-alive
 1 &lt; X-Powered-By: Express
 1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Content-Length: 203
-1 &lt; Etag: W/&quot;cb-GSaY2LZeDseSjp/eXNNZg7Qcw34&quot;
-1 &lt; Date: Wed, 12 Apr 2023 01:40:32 GMT
+1 &lt; Content-Length: 202
+1 &lt; Etag: W/&quot;ca-0LfsBbu/Bvyxjv1kcfYFO5zMYdw&quot;
+1 &lt; Date: Sun, 19 Nov 2023 05:22:52 GMT
 1 &lt; Via: 1.1 vegur
-{&quot;bookingid&quot;:8065,&quot;booking&quot;:{&quot;firstname&quot;:&quot;before update&quot;,&quot;lastname&quot;:&quot;Alex&quot;,&quot;totalprice&quot;:280,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-08&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Brunch&quot;}}
+{&quot;bookingid&quot;:414,&quot;booking&quot;:{&quot;firstname&quot;:&quot;before update&quot;,&quot;lastname&quot;:&quot;Alex&quot;,&quot;totalprice&quot;:280,&quot;depositpaid&quot;:true,&quot;bookingdates&quot;:{&quot;checkin&quot;:&quot;2023-08-08&quot;,&quot;checkout&quot;:&quot;2023-08-18&quot;},&quot;additionalneeds&quot;:&quot;Brunch&quot;}}
 </pre>
       </div>
     </div>
@@ -391,7 +394,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def bookingID = response.bookingid</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.009</span>
 
 </div>
 
@@ -418,7 +421,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">karate.log(bookingID)</span>
 
-  <span class="lead-duration duration">0.007</span>
+  <span class="lead-duration duration">0.019</span>
 
 </div>
 
@@ -436,7 +439,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-4" class="collapse collapsable-details">
-        <pre>09:40:32.308 8065 
+        <pre>13:22:52.554 414 
 </pre>
       </div>
     </div>
