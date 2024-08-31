@@ -1,0 +1,129 @@
+name: (Staging env) Onboarding and Payment Pipeline
+on:
+  schedule:
+    - cron: '00 00 * * *'
+
+
+jobs:
+  Automated_job:
+    runs-on:
+        group: Linux-Shared
+    container:
+        image: containers.github.acsdigital.dev/adb/robot-pip:1.0.0-SNAPSHOT
+
+    steps:
+    - uses: actions/checkout@v3
+
+    # Execution of robot test cases
+    - name: Execute Robot 
+      run:  |
+        robot  --variable=ENV: adb-staging-regression -outputdir •/Report/Onboarding TestCases/UserJourneyTest/02_Onboarding/TC_001_ope.robot   || true
+        robot  --variable-ENV: adb-staging-regression -outputdir •/Report/Payment TestCases/UserJourneyTest/04_Payments/TC_001_payments.robot   || true
+        robot  --variable=ENV:adb-staging-regression -outputdir •/Report/lAM Testcases/UserJourneylest/01_1AM   || true
+        robot  -—variable=ENV:adb-staging-regression -outputdir •/Report/Saving TestCases/JserJourneyTest/05_Deposits/TC_002_money_in.robot  || true
+        
+        cp -r ./Report/Onboarding/*.html ./Report 
+        cp -r ./Report/Payment/*.html ./Report 
+        cp -r ./Report/IAM/*.html ./Report 
+        cp -r ./Report/Saving/*.html ./Report
+
+    - name: Upload test results
+      - uses: actions/upload-artifact@v3
+        if: always ()
+        with:
+          name: Report 
+          path: Report
+
+    # Compress the Report folder
+    - name: Compress the Report folder
+      run:  |
+        tar -czf report.tar.gz -C  ./Report .
+      working-directory:    ${{ github.workspace }}
+
+
+    - name: Extract status value from XML
+      id: extract_status 
+      run: |
+        STATUS= `awk -F' [="<]' */<stat/(print "pass:" $4, "Fail:" $7}' Report/Onboarding/output.xml | tail -n 1` 
+        STATUS_ PAYMENT= `awk -F' [="<]' '/estat/{print "Pass:" $4, "Fail:" $7}' Report/Payment/output.ml | tail -n 1` 
+        STATUS_TAM=`awk -F'[="<] '/<stat/{print "Pass:" $4, "Fail:" $7}' Report/IAM/output-xml | tail -n -6 | head -n 1`
+        STATUS_SAVING=`awk -F'[="<]' '/estat/{print "Pass:" $4, "Fail:" $7}' Report/Saving/output-xml | tail -n 1`
+
+        echo "::set-output name=status::$STATUS" 
+        echo "::set-output name=status_payment::$STATUS_PAYMENT" 
+        echo "::set-output name=status_iam::$STATUS_IAM" 
+        echo "::set-output name=status_saving::$STATUS_SAVING"
+
+
+    - name: Read HTML template file 
+      id: read_html_template 
+      run: | 
+        cat /SampLeHTML/TestReport.html > TestReport.html
+
+
+    -  name: Replace placeholders in HTML template 
+       id: replace_placeholders 
+       run: |
+            sed -i "s/{{STATUS}}/${{ steps.extract_status.outputs.status }}/g" TestReport.html
+            sed -1 "s/{{STATUS_ PAYMENT}}/${{ steps.extract_status.outputs.Status_payment }}/g" TestReport.html 
+            sed -i "s/{{STATUS_IAM}}/${{ steps.extract_status.outputs.status_iam }}/g" TestReport.html 
+            sed -1 "s/{{STATUS_SAVING}}/${{ steps.extract_status.outputs.status_saving }}/g" TestReport.html
+
+
+    - name: Send Google Chat notification
+        if: always() # Use always to ensure that the notification is also send on failure of former steps
+        uses: adb/google-chat-action@main
+        with:
+          webhookUrl:  '${{ secrets.QA_ENGINEERING_CHAT_WEBHOOK }}'
+          title: Staging Sanity 
+          createDefaultSection: false 
+          collapsibleDefaultSection: false
+          additionalSections:
+                    '[{"header": "Onboarding", "widgets": [{"decoratedText": {"startIcon": {"knownIcon": "STAR"}, "text": "${{ steps.extract_status.outputs.status }}"}}] }, 
+                    {"header"; "Payment", "widgets": [{"decoratedText": {"startIcon": {"knownIcon": "STAR"}, "text": "${{ steps.extract_status.outputs.status_payment }}"}}] },
+                     ("header": "IAM", "widgets": [{"decoratedText": {"startIcon": {"knownIcon": "STAR"}, "text": "${{ steps.extract_status.outputs.status_iam }} " }}] },
+                      ("header": "Saving pod", "widgets": [{"decoratedText": {"startIcon": {"knownIcon": "STAR"}, "text": "${{ steps.extract_status.outputs.status_saving }} " }}]} ]'
+
+
+    # Send mail code for future
+    - name: Send mail
+      uses: adb/action-send-mail@master
+      with:
+        # Specify connection via URL (replaces server_address, server port, secure,
+        # username and password)
+        #
+        # Format:
+        # *   * smtp://user:password@server:port
+        # *   * smtp+starttls://user:password@server:port
+        connection url: ${{   secrets.MAIL_CONNECTION   }}
+        # Required mail server address  if not connection url
+        server_address: smtp.gmail. com
+        # Server port, default 25:
+        server_port: 465
+        # Optional whether this connection use TLS (default is true if server port is 465)
+        secure: true
+        # Optional (recommended) mail server username:
+        username:  ${{ secrets.MAIL_USERNAME }}
+        
+        # Optional (recommended) mail server password:
+        password:   ${{ secrets.MAIL_PASSWORD }}
+        # Required mail subject:
+        subject:   |
+            (Staging env) Test Report for Onboarding, Payment, IAM and Saving
+        # Required recipients' addresses:
+        to: 
+        # Required sender full name (address can be skipped):
+        from: QA Engineering # <user@example. com>
+        * Optional plain body:
+        html_body: file://TestReport.html
+        # # Optional unsigned/invalid certificates allowance:
+        # ignore_cert: true
+        # # Optional converting Markdown to HTML (set content_type to text/html too) :
+        # convert_markdown: true
+        # # Optional attachments:
+        attachments: •/report.tar.gz                                                                               
+  
+
+
+    
+  
